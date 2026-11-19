@@ -1,4 +1,4 @@
-﻿using CSharpPracticum.Common;
+using CSharpPracticum.Common;
 using CSharpPracticum.Tasks.Level1;
 using CSharpPracticum.Tasks.Level2;
 using CSharpPracticum.Tasks.Level3;
