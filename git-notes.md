@@ -22,3 +22,13 @@ c658d6a feat: add initial task 35 demo file
 200995d chore: add gitignore and editorconfig
 1888ef8 docs: add task 15 graph to git-notes.md
 ```
+
+## Задание 46. git stash / stash pop
+**git stash list (до pop):**
+```text
+stash@{0}: On main: WIP: temp changes for task 46
+```
+**git stash list (после pop):**
+```text
+(пусто)
+```
