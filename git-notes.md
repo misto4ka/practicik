@@ -32,3 +32,20 @@ stash@{0}: On main: WIP: temp changes for task 46
 ```text
 (пусто)
 ```
+
+## Задание 47. rebase -i (сквош 4 коммитов)
+**git log --oneline (до squash):**
+```text
+258f6ce feat: squash commit 4
+cf0f7a8 feat: squash commit 3
+a1f131d feat: squash commit 2
+81ce6b9 feat: squash commit 1
+7aef8ad docs: add task 46 stash output to git-notes.md
+828472a docs: add task 35 rebase log to git-notes.md
+```
+**git log --oneline (после squash):**
+```text
+6511bc3 feat: squash commit 1
+7aef8ad docs: add task 46 stash output to git-notes.md
+828472a docs: add task 35 rebase log to git-notes.md
+```
