@@ -365,3 +365,6 @@ bin/
 obj/
 .vs/
 *.user
+
+.idea/
+*.suo
