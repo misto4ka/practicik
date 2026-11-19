@@ -72,3 +72,22 @@ Date:   Thu Nov 19 17:02:06 2026 +0300
  git-notes.md | 17 +++++++++++++++++
  1 file changed, 17 insertions(+)
 ```
+
+## Задание 49. Восстановление коммита через reflog
+**git reflog:**
+```text
+7512901 HEAD@{0}: reset: moving to HEAD~1
+ca470ba HEAD@{1}: commit: feat: commit to be deleted and restored via reflog
+7512901 HEAD@{2}: commit: docs: add task 48 tag output to git-notes.md
+f6f1dd8 HEAD@{3}: commit: docs: add task 47 squash logs to git-notes.md
+7aef8ad HEAD@{4}: checkout: moving from feature/squash-demo to main
+6511bc3 HEAD@{5}: rebase (finish): returning to refs/heads/feature/squash-demo
+```
+**git log --oneline (после восстановления):**
+```text
+ca470ba feat: commit to be deleted and restored via reflog
+7512901 docs: add task 48 tag output to git-notes.md
+f6f1dd8 docs: add task 47 squash logs to git-notes.md
+7aef8ad docs: add task 46 stash output to git-notes.md
+828472a docs: add task 35 rebase log to git-notes.md
+```
