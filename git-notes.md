@@ -49,3 +49,26 @@ a1f131d feat: squash commit 2
 7aef8ad docs: add task 46 stash output to git-notes.md
 828472a docs: add task 35 rebase log to git-notes.md
 ```
+
+## Задание 48. Теги (v1.0.0)
+**git tag:**
+```text
+v1.0.0
+```
+**git show v1.0.0:**
+```text
+tag v1.0.0
+Tagger: misto4ka <A32nn88a@gmail.com>
+Date:   Thu Nov 19 17:02:45 2026 +0300
+
+Release v1.0.0
+
+commit f6f1dd8258818c4275e808cbd7fe55e90f24430d
+Author: misto4ka <A32nn88a@gmail.com>
+Date:   Thu Nov 19 17:02:06 2026 +0300
+
+    docs: add task 47 squash logs to git-notes.md
+
+ git-notes.md | 17 +++++++++++++++++
+ 1 file changed, 17 insertions(+)
+```
