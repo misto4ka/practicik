@@ -91,3 +91,14 @@ f6f1dd8 docs: add task 47 squash logs to git-notes.md
 7aef8ad docs: add task 46 stash output to git-notes.md
 828472a docs: add task 35 rebase log to git-notes.md
 ```
+
+## Задание 50. Поиск «плохого» коммита через git bisect
+**Начальный рабочий коммит (good):** `5bdc9ed`
+**Ход бисекции:**
+```text
+Проверка f46a3b6 -> обнаружен баг -> git bisect bad
+9c66287f91099dc36dd0243ed5e7a8ffc293dc7b was both 'good' and 'bad'
+Проверка 9c6687 -> работает верно -> git bisect good
+error: Bad rev input: 9c6687
+```
+**Завершение:** `git bisect reset`
