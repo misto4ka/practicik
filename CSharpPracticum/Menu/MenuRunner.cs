@@ -7,7 +7,7 @@ namespace CSharpPracticum.Menu
 {
     public class MenuRunner
     {
-            public static void Run()
+        public static void Run()
         {
             Console.WriteLine("=== Практикум по C# ===");
             Console.WriteLine("1. Уровень 1 - Базовый (задания 1-15)");
@@ -38,6 +38,13 @@ namespace CSharpPracticum.Menu
                 Console.WriteLine("Неверный ввод, введите от 1 до 4\n");
                 MenuRunner.Run();
             }
-        }  
+
+            else
+            {
+                Console.Clear();
+                Console.WriteLine("Неверный ввод, введите число от 1 до 4\n");
+                MenuRunner.Run();
+            }
+        }
     }
 }

@@ -19,7 +19,7 @@ namespace CSharpPracticum.Tasks.Level1
             Console.WriteLine(Requirements[0]);
             Console.WriteLine("--------------------------------------------------\n");
 
-
+            Console.WriteLine("Задание выполняется в Git / GitHub (не требует программного кода в консоли).");
 
             Console.WriteLine("Нажмите Enter для возврата в меню...");
             Console.ReadLine();

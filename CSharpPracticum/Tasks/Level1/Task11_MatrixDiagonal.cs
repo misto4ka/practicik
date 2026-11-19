@@ -19,9 +19,40 @@ namespace CSharpPracticum.Tasks.Level1
             Console.WriteLine(Requirements[0]);
             Console.WriteLine("--------------------------------------------------\n");
 
+            Console.Write("Введите размер матрицы N (минимум 2): ");
+            string input = Console.ReadLine();
+
+            if (!int.TryParse(input, out int n) || n < 2)
+            {
+                Console.WriteLine("Ошибка! Размер матрицы должен быть целым числом от 2 и больше.");
+                return;
+            }
+
+            int[,] matrix = new int[n, n];
+            Random rnd = new Random();
+
+            Console.WriteLine($"\nСгенерированная матрица {n}x{n}:");
+
+            for (int i = 0; i < n; i++)
+            {
+                for (int j = 0; j < n; j++)
+                {
+                    matrix[i, j] = rnd.Next(1, 10);
+                    Console.Write($"{matrix[i, j]} ");
+                }
+                Console.WriteLine();
+            }
+
+            int diagonalSum = 0;
+            for (int i = 0; i < n; i++)
+            {
+                diagonalSum += matrix[i, i];
+            }
+
+            Console.WriteLine($"\nСумма элементов главной диагонали: {diagonalSum}");
 
 
-            Console.WriteLine("Нажмите Enter для возврата в меню...");
+            Console.WriteLine("\nНажмите Enter для возврата в меню...");
             Console.ReadLine();
             Console.Clear();
             LevelMenu.Show(1);

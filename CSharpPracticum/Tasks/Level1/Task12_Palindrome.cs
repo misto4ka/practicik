@@ -19,12 +19,50 @@ namespace CSharpPracticum.Tasks.Level1
             Console.WriteLine(Requirements[0]);
             Console.WriteLine("--------------------------------------------------\n");
 
+            Console.Write("Введите строку для проверки на палиндром: ");
+            string input = Console.ReadLine();
 
+            bool result = IsPalindrome(input);
+            Console.WriteLine($"Результат: {result}");
 
-            Console.WriteLine("Нажмите Enter для возврата в меню...");
+            Console.WriteLine("\nНажмите Enter для возврата в меню...");
             Console.ReadLine();
             Console.Clear();
             LevelMenu.Show(1);
         }
+
+        public bool IsPalindrome(string text)
+        {
+            if (string.IsNullOrEmpty(text))
+            {
+                return true;
+            }
+
+            string cleaned = "";
+            for (int i = 0; i < text.Length; i++)
+            {
+                char c = char.ToLower(text[i]);
+                if (char.IsLetterOrDigit(c))
+                {
+                    cleaned += c;
+                }
+            }
+
+            int left = 0;
+            int right = cleaned.Length - 1;
+
+            while (left < right)
+            {
+                if (cleaned[left] != cleaned[right])
+                {
+                    return false;
+                }
+                left++;
+                right--;
+            }
+
+            return true;
+        }
+
     }
 }
