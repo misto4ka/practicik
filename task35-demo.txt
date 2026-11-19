@@ -1,2 +1,5 @@
 ﻿Шаг 1: настройка окружения
 Шаг 2: проверка Conventional Commits
+Rebase step 1
+Rebase step 2
+Rebase step 3
