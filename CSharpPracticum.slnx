@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="CSharpPracticum/CSharpPracticum.csproj" />
+  <Project Path="LibraryTests/LibraryTests.csproj" />
 </Solution>
