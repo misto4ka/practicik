@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- WinExe = оконное приложение (без чёрной консоли) -->
+    <OutputType>WinExe</OutputType>
+    <!-- Версия .NET 10 для Windows -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <!-- Подключаем Windows Forms -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <!-- Отключаем предупреждения о null, чтобы код был проще -->
+    <Nullable>disable</Nullable>
+    <!-- Автоматически подключает using System; System.IO; System.Linq и т.д. -->
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>GroomingJournal</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Копировать скрипт базы данных рядом с .exe, чтобы программа могла его выполнить -->
+    <None Update="Database.sql" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Пакет для работы с Microsoft SQL Server. Visual Studio скачает его из NuGet сама -->
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.*" />
+  </ItemGroup>
+
+</Project>
