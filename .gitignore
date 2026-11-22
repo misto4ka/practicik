@@ -368,3 +368,10 @@ obj/
 
 .idea/
 *.suo
+*.mdf
+*.ldf
+*.bak
+.env
+appsettings.Development.json
+bin/
+obj/
