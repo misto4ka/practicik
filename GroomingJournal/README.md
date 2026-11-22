@@ -2,16 +2,6 @@
 
 Учебный проект: приложение на C# (Windows Forms, .NET 10) + база данных Microsoft SQL Server.
 
-## Как запустить
-
-1. Откройте `GroomingJournal.csproj` в Visual Studio и нажмите F5. NuGet сам скачает пакет `Microsoft.Data.SqlClient` (нужен интернет).
-2. Нужен установленный **SQL Server LocalDB**. Проверка: Win+R → `cmd` → команда `sqllocaldb info`. Если выводится `MSSQLLocalDB`, всё есть. Если нет, в Visual Studio Installer добавьте рабочую нагрузку «Хранение и обработка данных».
-3. Имя сервера задаётся одной строкой в `Database.cs`: `private const string ServerName = ...`. По умолчанию там `.\SQLEXPRESS`. Если у вас LocalDB из Visual Studio, впишите `(localdb)\MSSQLLocalDB`. Если свой SQL Server, впишите имя из окна подключения в SSMS (например, `localhost` или `ИМЯ-ПК\SQLEXPRESS`). Если вход в SSMS по логину и паролю, а не через Windows, замените в обеих строках подключения `Integrated Security=True` на `User Id=sa;Password=ваш_пароль`.
-
-Если база недоступна, программа при запуске покажет понятное сообщение с причинами.
-
-Как это работает в коде: метод `Database.Initialize()` проверяет через `DB_ID('GroomingSalon')`, есть ли база. Если нет, читает `Database.sql`, делит текст по строкам `GO` на части и выполняет каждую командой `ExecuteNonQuery()`.
-
 ## Что умеет программа
 
 - Показывает журнал: дата, день недели, время, кличка, животное, порода, хозяин, телефон, услуга, цена.
