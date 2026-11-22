@@ -4,8 +4,6 @@
 
 ## Как запустить
 
-Базу данных создавать вручную не нужно. При первом запуске программа сама выполнит скрипт `Database.sql` (он копируется рядом с .exe) и создаст базу `GroomingSalon` с пятью таблицами и начальными данными. Дальше база просто используется.
-
 1. Откройте `GroomingJournal.csproj` в Visual Studio и нажмите F5. NuGet сам скачает пакет `Microsoft.Data.SqlClient` (нужен интернет).
 2. Нужен установленный **SQL Server LocalDB**. Проверка: Win+R → `cmd` → команда `sqllocaldb info`. Если выводится `MSSQLLocalDB`, всё есть. Если нет, в Visual Studio Installer добавьте рабочую нагрузку «Хранение и обработка данных».
 3. Имя сервера задаётся одной строкой в `Database.cs`: `private const string ServerName = ...`. По умолчанию там `.\SQLEXPRESS`. Если у вас LocalDB из Visual Studio, впишите `(localdb)\MSSQLLocalDB`. Если свой SQL Server, впишите имя из окна подключения в SSMS (например, `localhost` или `ИМЯ-ПК\SQLEXPRESS`). Если вход в SSMS по логину и паролю, а не через Windows, замените в обеих строках подключения `Integrated Security=True` на `User Id=sa;Password=ваш_пароль`.
